@@ -11,7 +11,9 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://45.130.165.205:3000/",
+    origin: "http://45.130.165.205:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
